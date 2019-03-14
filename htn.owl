@@ -17,82 +17,9 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/htn">
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/bfo/dev/owl"/>
-        <rdfs:comment>TODO:
-&apos;is quality specification&apos; needs further articulation of the range restriction using the acheives relation. Import acheives relation.
-&apos;lacks plasma memberane part&apos; needs domain and range restrictions importing other classes.
-&apos;has member&apos; needs imported classes for domain and range restrictions</rdfs:comment>
-        <obo:IAO_0000116>BFO 2 Reference: BFO does not claim to be a complete coverage of all entities. It seeks only to provide coverage of those entities studied by empirical science together with those entities which affect or are involved in human activities such as data processing and planning – coverage that is sufficiently broad to provide assistance to those engaged in building domain ontologies for purposes of data annotation [17</obo:IAO_0000116>
-        <rdfs:comment>This ontology is intended for encoding constraints on ro/core in a way that is usable by EL reasoners such as Elk. In future this ontology may be derived by some automatic or semi-automatic translation process from a more direct encoding.</rdfs:comment>
-        <rdfs:comment>This file is the MIREOT specification file - see http://obi-ontology.org/page/MIREOT</rdfs:comment>
-        <rdfs:comment>IDEAS
-
-Model PCORnet data with HTN ontology using Ontop
-
-Import into Stardog to write more sophisticated queries</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://groups.google.com/group/bfo-devel"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo/2014-05-03/ReleaseNotes"/>
-        <rdfs:comment>Enrichment that can be added:
-
-Explicitly link phenotypes to anotomical parts.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(Anonymous-21)) [Axioms: 32 Logical Axioms: 0]</rdfs:comment>
-        <dc:source rdf:resource="http://obofoundry.org/ro"/>
-        <rdfs:seeAlso rdf:resource="http://groups.google.com/group/bfo-owl-devel"/>
-        <rdfs:comment>Other resources
-
-https://www.alliancegenome.org/disease/ - Has genetic relations with PMID prov.
-https://www.wikidata.org/wiki/Q246084</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://groups.google.com/group/bfo-discuss"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <rdfs:comment>Future work
-
-Find disorders that are the material basis for DOID disease.</rdfs:comment>
-        <rdfs:comment>This is a domain ontology for hypertension.</rdfs:comment>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
-        <rdfs:comment xml:lang="en">This is an early version of BFO version 2 and has not yet been extensively reviewed by the project team members. Please see the project site http://code.google.com/p/bfo/ , the bfo2 owl discussion group http://groups.google.com/group/bfo-owl-devel , the bfo2 discussion group http://groups.google.com/group/bfo-devel, the tracking google doc http://goo.gl/IlrEE, and the current version of the bfo2 reference http://purl.obolibrary.org/obo/bfo/dev/bfo2-reference.docx . This ontology is generated from a specification at http://bfo.googlecode.com/svn/trunk/src/ontology/owl-group/specification/ and with the code that generates the OWL version in http://bfo.googlecode.com/svn/trunk/src/tools/. A very early version of BFO version 2 in CLIF is at http://purl.obolibrary.org/obo/bfo/dev/bfo.clif</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://bfo.googlecode.com/svn/trunk/src/tools/"/>
-        <rdfs:comment>1. Imported the full axiom closure of DOID classes used in HTN FACTS - (create a diff with DOID exports)
-2. Deleted all inverse of equiv statements on object properties
-3. Add domain and range restrictions to object properties according to  NL - 
-     A. restrictions on &quot;bearer of&quot; results in unsatisfied classes.
-      i. &apos;Abnormal inflammatory response&apos; - has part some process, inheres in a process. SDC cannot have process parts. Processes cannot be the bearer of a SDC.
-     ii. ‘Abnormality of body weight’ inherits unsatisfiability from ‘Growth abnormality’
-     iii. ‘aspiration pneumonia’ inherits unsatisfiability from  ‘bacterial pneumonia’.
-     iv. Bacterial pneumonia inherits unsatisfiability from Pneumonia.
-     v. Bronchopneumonia inherits unsatisfiability from bronchopneumonia.
-     vi. Descreased body weight inherits unsatisfiability from Abnormality of body weight.
-     vii. focal segmental glomerulosclerosis inherits unsat from glomerulosclerosis.
-     viii. glomerulonephritis inherits unsat from Nephritis
-     ix. Glomerulosclerosis inherits unsat from glomerulonephritis
-     x. Growth abnormality inheres in some growth. Growth is a process.
-     xi. IgA glomerulonephritis inherits unsat from glomerulonephritis
-     xii. Increased inflammatory response inherits unsat from Abnormal inflammatory response and also inheres in some inflammatory     response, which is a process
-     xiii. Lung carcinoma inherits unsat from Weight loss
-     xiv. Lung large cell carcinoma inherits unsat from non-small cell lung carcinoma
-     xv. Nephritis inherits unsat from Increased inflammatory response; inheres in inflammatory response (which is a process)
-     xvi. Non-small cell lung carcinoma inherits unsat from lung carcinoma
-     xvii. Pneumonia inherits unsat from Increased inflammatory response; inheres in some inflammatory response.
-     xviii. Tachypnea has part some increased rate (and ‘inheres in’ some ‘respiratory gaseous exchange’)
-     xix. Weight loss inherits unsat from decreased body weight
-     B. restrictions on location relations results in many more unsatisfiable classes where a disease is asserted to be located in something. Diseases are dispositions but only independent continuants have locations.
-
-4. added additional class restrictions to diseaes in accordance with NL def.
-5. added &apos;has material basis&apos; class restrictions to diseases in accordance with NL def. This only works for non-DOID diseases.
-
-6. Imported Cardiovascular Disease Ontology</rdfs:comment>
-        <rdfs:comment xml:lang="en">The http://purl.obolibary.org/obo/bfo/classes-only.owl variant of BFO (&quot;bfo_classes_only.owl&quot;) includes only the class hierarchy and annotations from the full OWL version of BFO 2: http://purl.obolibary.org/obo/bfo.owl (&quot;bfo.owl&quot;). There are no object properties or logical axioms that use the object properties in bfo_classes_only.owl. As the logical axioms in the bfo_classes_only.owl variant are limited to subclass and disjoint assertions they are much weaker than the logical axioms in bfo.owl.
- 
-If you plan to use the relations that define BFO 2, you should import bfo.owl instead of bfo_classes_only.owl. To the extent that the relations are used without importing bfo.owl, be mindful that they should be used in a manner consistent with their use in bfo.owl. Otherwise if your ontology is imported by a another ontology that imports bfo.owl there may be inconsistencies. 
- 
-See the BFO 2 release notes for further information about BFO 2. Please note that the current release of bfo.owl uses temporal relations when the subject or object is a continuant, a major change from BFO 1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://bfo.googlecode.com/svn/trunk/src/ontology/owl-group/specification/"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(Anonymous-21)) [Axioms: 26 Logical Axioms: 0]</rdfs:comment>
-        <obo:IAO_0000116>BFO 2 Reference: BFO’s treatment of continuants and occurrents – as also its treatment of regions, rests on a dichotomy between space and time, and on the view that there are two perspectives on reality – earlier called the ‘SNAP’ and ‘SPAN’ perspectives, both of which are essential to the non-reductionist representation of reality as we understand it from the best available science [30</obo:IAO_0000116>
-        <rdfs:comment>This ontology is in early development. Expect it to change.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo/dev/bfo.clif"/>
-        <foaf:homepage rdf:resource="http://code.google.com/p/bfo/"/>
-        <obo:IAO_0000116>BFO 2 Reference: For both terms and relational expressions in BFO, we distinguish between primitive and defined. ‘Entity’ is an example of one such primitive term. Primitive terms in a highest-level ontology such as BFO are terms that are so basic to our understanding of reality that there is no way of defining them in a non-circular fashion. For these, therefore, we can provide only elucidations, supplemented by examples and by axioms.</obo:IAO_0000116>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo/2012-07-20/Reference"/>
+        <dc:creator>Amanda Hicks</dc:creator>
+        <dc:title>Hypertension Ontology For Clinical Data</dc:title>
+        <oboInOwl:creation_date>2019-03-11</oboInOwl:creation_date>
     </owl:Ontology>
     
 
@@ -17925,15 +17852,6 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000030"/>
         <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000024"/>
         <rdfs:label xml:lang="en">Tom&apos;s second health care encounter</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HTN_00000027 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000027">
-        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000011"/>
-        <rdfs:label xml:lang="en">Tom&apos;s phenotype</rdfs:label>
     </owl:NamedIndividual>
     
 
