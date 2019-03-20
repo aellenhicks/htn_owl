@@ -12236,6 +12236,42 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HTN_00000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000002">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002201"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VSO_0000004"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                        <owl:onClass>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_00000041"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:onClass>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000004"/>
         <obo:IAO_0000115>Adult: Systolic BP 120-139 mm Hg or diastolic BP 80-89 mm Hg;
 Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Adolescent: BP &gt;= 120/80 even if &lt; 95th percentile</obo:IAO_0000115>
@@ -12612,6 +12648,9 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000044"/>
+        <obo:IAO_0000119>2017 Guideline for High Blood Pressure in Adults
+
+http://www.onlinejacc.org/content/71/19/e127?_ga=2.55616109.754894593.1553089039-383350264.1553089039</obo:IAO_0000119>
         <rdfs:label xml:lang="en">grade 1 elevated adult diastolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
     
@@ -16875,14 +16914,6 @@ Sagar Jain</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/omrse.owl"/>
         <rdfs:comment xml:lang="en">Previous definition: A role played by an entity in human social processes.</rdfs:comment>
         <rdfs:label xml:lang="en">role in human social processes</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
     </owl:Class>
     
 
