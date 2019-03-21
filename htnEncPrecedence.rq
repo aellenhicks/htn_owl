@@ -1,0 +1,38 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX mydata: <http://example.com/resource/>
+insert {
+    graph mydata:htnEncPrecedence {
+        ?hce1 obo:BFO_0000063 ?hce2
+    }
+}
+WHERE {
+    ?person rdf:type obo:NCBITaxon_9606 .
+    ?patrole rdf:type obo:OMRSE_00000011 ;
+             obo:RO_0000052 ?person .
+    ?hce1 rdf:type obo:OGMS_0000097 ;
+          obo:BFO_0000055 ?patrole .
+    ?hce2 rdf:type obo:OGMS_0000097 ;
+          obo:BFO_0000055 ?patrole .
+    ?procbound1 rdf:type obo:BFO_0000035 ;
+                obo:RO_0002223 ?hce1 .
+    ?procbound2 rdf:type obo:BFO_0000035 ;
+                obo:RO_0002223 ?hce2 .
+    ?tmd1 rdf:type obo:IAO_0000416 ;
+          obo:IAO_0000136 ?procbound1 ;
+          obo:IAO_0000004 ?dateval1 .
+    ?tmd2 rdf:type obo:IAO_0000416 ;
+          obo:IAO_0000136 ?procbound2 ;
+          obo:IAO_0000004 ?dateval2 .
+    filter(?dateval2 > ?dateval1)
+    filter not exists {
+        ?hce3 a obo:OGMS_0000097 ;
+              obo:BFO_0000055 ?patrole .
+        ?procbound3 a obo:BFO_0000035 ;
+                    obo:RO_0002223 ?hce3 .
+        ?tmd3 a obo:IAO_0000416 ;
+              obo:IAO_0000136 ?procbound3 ;
+              obo:IAO_0000004 ?dateval3 .
+        filter(?dateval2 > ?dateval3 && ?dateval3 > ?dateval1) 
+    }
+}
