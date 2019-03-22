@@ -1996,7 +1996,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTN_00000028">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004022"/>
-        <rdfs:label xml:lang="en">feature gives rise to disease</rdfs:label>
+        <rdfs:label xml:lang="en">feature is basis of disease</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -5990,7 +5990,7 @@ Environments include natural environments or exposures, experimentally applied c
             </owl:Class>
         </rdfs:range>
         <rdfs:comment xml:lang="en">A relation that holds between the disease and a feature (a phenotype or other disease) where the physical basis of the disease is the feature.</rdfs:comment>
-        <rdfs:label xml:lang="en">disease arises from feature</rdfs:label>
+        <rdfs:label xml:lang="en">disease has basis in feature</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -12209,10 +12209,12 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VSO_0000005"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VSO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>a blood pressure measurement datum that is a quality measurement of some diastolic blood pressure</obo:IAO_0000115>
+        <dc:creator>Amanda Hicks</dc:creator>
         <rdfs:label xml:lang="en">diastolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
     
@@ -12276,7 +12278,8 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <obo:IAO_0000115>Adult: Systolic BP 120-139 mm Hg or diastolic BP 80-89 mm Hg;
 Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Adolescent: BP &gt;= 120/80 even if &lt; 95th percentile</obo:IAO_0000115>
         <obo:IAO_0000119>Common Terminology Criteria for Adverse Events</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">grade 1 hypertension</rdfs:label>
+        <dc:creator>Amanda Hicks</dc:creator>
+        <rdfs:label xml:lang="en">grade 1 hypertensive phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -12288,7 +12291,7 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
@@ -12309,6 +12312,19 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
                                         <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">129.0</xsd:maxInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -12424,7 +12440,7 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An elevated blood pressure measurement datum with a measurement value that is equal to or above some specified threshold</rdfs:comment>
-        <rdfs:label xml:lang="en">elevated systolic blood pressure measurement datum</rdfs:label>
+        <rdfs:label xml:lang="en">above normal systolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
     
 
@@ -12433,7 +12449,7 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000023"/>
-        <rdfs:label xml:lang="en">elevated blood pressure phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">above normal blood pressure phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -12451,7 +12467,7 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VSO_0000005"/>
         <rdfs:comment xml:lang="en">A blood pressure measurement datum with a measurement value that is equal to or above some specified threshold</rdfs:comment>
-        <rdfs:label xml:lang="en">elevated blood pressure measurement datum</rdfs:label>
+        <rdfs:label xml:lang="en">above normal blood pressure measurement datum</rdfs:label>
     </owl:Class>
     
 
@@ -12508,7 +12524,20 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_00000003"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VSO_0000038"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HTN_00000005"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
                         <owl:someValuesFrom>
@@ -12516,7 +12545,7 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.0</xsd:minInclusive>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">130.0</xsd:minInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -12538,7 +12567,8 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:label xml:lang="en">grade 1 elevated adult systolic blood pressure meaurement datum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000009"/>
+        <rdfs:label xml:lang="en">stage 1 elevated systolic blood pressure meaurement datum per the American College of Cardiology 2017 guideline</rdfs:label>
     </owl:Class>
     
 
@@ -12555,6 +12585,16 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
     <!-- http://purl.obolibrary.org/obo/HTN_00000043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000043">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_00000000"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000063"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -12563,19 +12603,221 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A diastolic blood pressure measurement datum with a measurement value that is equal to or above some specified threshold</rdfs:comment>
-        <rdfs:label xml:lang="en">elevated diastolic blood pressure measurement datum</rdfs:label>
+        <rdfs:label xml:lang="en">above normal diastolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HTN_00000044 -->
+    <!-- http://purl.obolibrary.org/obo/HTN_00000051 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000044">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000051">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001167"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">adult age measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000062">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VSO_0000015"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HTN_00000005"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000063"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">a diastolic blood pressure measurement datum is a quality measurement of some adult&apos;s diastolic blood pressure with a value &lt;80 mm Hg</obo:IAO_0000115>
+        <obo:IAO_0000119>Whelton, P. K., Carey, R. M., Aronow, W. S., Casey, D. E., Collins, K. J., Dennison Himmelfarb, C., . . . Wright, J. T. (2017). 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. doi:10.1161/hyp.0000000000000065</obo:IAO_0000119>
+        <dc:creator>Amanda Hicks</dc:creator>
+        <rdfs:label xml:lang="en">normal adult diastolic blood pressure measurement datum per the American College of Cardiology 2017 guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
+        <rdfs:label xml:lang="en">normal diastolic blood pressure measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <rdfs:label xml:lang="en">normal systolic blood pressure measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000065">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VSO_0000038"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HTN_00000005"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000064"/>
+        <obo:IAO_0000115 xml:lang="en">a systolic blood pressure measurement datum that is a quality measurement of some adult&apos;s systolic blood pressure with a value &lt;120 mm Hg</obo:IAO_0000115>
+        <obo:IAO_0000119>Whelton, P. K., Carey, R. M., Aronow, W. S., Casey, D. E., Collins, K. J., Dennison Himmelfarb, C., . . . Wright, J. T. (2017). 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. doi:10.1161/hyp.0000000000000065</obo:IAO_0000119>
+        <dc:creator>Amanda Hicks</dc:creator>
+        <rdfs:label xml:lang="en">normal adult systolic blood pressure measurement datum per the American College of Cardiology 2017 guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VSO_0000005"/>
+        <rdfs:label xml:lang="en">normal blood pressure measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000066"/>
+        <rdfs:label xml:lang="en">normal adult normal blood pressure measurement datum per the American College of Cardiology 2017 guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000068">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VSO_0000038"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HTN_00000005"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">140.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000009"/>
+        <rdfs:label xml:lang="en">stage 2 elevated systolic blood pressure measurement per the American College of Cardiology 2017 guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000069">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
@@ -12605,81 +12847,7 @@ Pediatric: Systolic/diastolic BP &gt;90th percentile but&lt; 95th percentile; Ad
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000043"/>
-        <rdfs:comment xml:lang="en">A diastolic blood pressure measurement datum that is about a blood pressure that inheres in an adult with a measurement value that is equal to or above some specified threshold for adults</rdfs:comment>
-        <rdfs:label xml:lang="en">elevated adult diastolic blood pressure measurement datum</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HTN_00000045 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000045">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_00000044"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
-                        <owl:someValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:minInclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
-                        <owl:someValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">89.0</xsd:maxInclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000044"/>
-        <obo:IAO_0000119>2017 Guideline for High Blood Pressure in Adults
-
-http://www.onlinejacc.org/content/71/19/e127?_ga=2.55616109.754894593.1553089039-383350264.1553089039</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">grade 1 elevated adult diastolic blood pressure measurement datum</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HTN_00000051 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000051">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001167"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
-                        <owl:someValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</xsd:minInclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:label xml:lang="en">adult age measurement datum</rdfs:label>
+        <rdfs:label xml:lang="en">above normal adult diastolic blood pressure measurement datum per the American College of Cardiology 2017 guideline</rdfs:label>
     </owl:Class>
     
 
@@ -18148,7 +18316,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000012">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000013"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000013"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">127.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s elevated systolic BP measure</rdfs:label>
     </owl:NamedIndividual>
@@ -18179,7 +18347,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000018">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000013"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000013"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">117.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s normal systolic BP measure data item</rdfs:label>
     </owl:NamedIndividual>
@@ -18212,7 +18380,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000021">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000022"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000022"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">126.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara first elevated systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18244,7 +18412,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000024">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000022"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000022"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">122.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s second elevated systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18267,7 +18435,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000026">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000049"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000049"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">142.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s systolic BP measurement data item</rdfs:label>
     </owl:NamedIndividual>
@@ -18376,7 +18544,8 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
     <!-- http://purl.obolibrary.org/obo/HTN_00000038 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000038">
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000034"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000034"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s first diastolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18386,7 +18555,8 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
     <!-- http://purl.obolibrary.org/obo/HTN_00000039 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000039">
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000034"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000034"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">81.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s second diastolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18408,7 +18578,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000046">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000048"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000048"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">92.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s diastolic BP measurement data item</rdfs:label>
     </owl:NamedIndividual>
@@ -18471,7 +18641,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000053">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000052"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000052"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18482,7 +18652,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000054">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000033"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000033"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18503,7 +18673,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000056">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000055"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000055"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18524,7 +18694,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000058">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000057"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000057"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">54.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
@@ -18555,7 +18725,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000061">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000061"/>
+        <obo:IAO_0000221 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000060"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Fanny&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
