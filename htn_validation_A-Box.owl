@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/aellenhicks/htn_owl/a_box"
+     xml:base="https://raw.githubusercontent.com/aellenhicks/htn_owl/a_box"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:VSO="http://purl.obolibrary.org/obo/VSO#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:ns0="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl">
+        <oboInOwl:creation_date>2019-03-19</oboInOwl:creation_date>
+        <dc:title>Hypertension Ontology For Clinical Data</dc:title>
+        <dc:creator>Amanda Hicks</dc:creator>
+    </owl:Ontology>
+
+ <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000007 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000007">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:comment xml:lang="en">Desmond is 18 years old, has no diagnosis of hypertension, but has two elevated diastolic BP measures in the range of grade 1 hypertension.</rdfs:comment>
+        <rdfs:label xml:lang="en">Desmond</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000008 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000008">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000027"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000038"/>
+        <rdfs:label xml:lang="en">Desmond&apos;s first health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000010 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000010">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:comment xml:lang="en">Basil is 24 years old, has no diagnosis of hypertension and only one elevated systolic BP measure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Basil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000011 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000011">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:comment xml:lang="en">Clara is 43 years old and has two elevated systolic BP measures at two distinct visits.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clara</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000012 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000012">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000013"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">127.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Basil&apos;s elevated systolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000013 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000013">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/VSO_0000038"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000010"/>
+        <rdfs:label xml:lang="en">Basil&apos;s systolic BP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000017 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000017">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:comment xml:lang="en">Ernest is 54, has two elevated BP measures at the same visit (one systolic, one diastolic) they are above grade 1 hypertension</rdfs:comment>
+        <rdfs:label xml:lang="en">Ernest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000018 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000018">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000013"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">117.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Basil&apos;s normal systolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000019"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000020"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+
+        <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000023"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000025"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000019 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000019">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000029"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000012"/>
+        <rdfs:label xml:lang="en">Basil&apos;s first health care encoutner</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000020 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000020">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000029"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000018"/>
+        <rdfs:label xml:lang="en">Basil&apos;s second health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000021 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000021">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">126.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Clara first elevated systolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000022 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000022">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/VSO_0000038"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000011"/>
+        <rdfs:label xml:lang="en">Clara&apos;s systolic BP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000023 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000023">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000030"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000021"/>
+        <rdfs:label xml:lang="en">Clara&apos;s first health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000024 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000024">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">122.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Clara&apos;s second elevated systolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000025 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000025">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000030"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000024"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label xml:lang="en">Clara&apos;s second health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000026 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000026">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000049"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">142.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Ernest&apos;s systolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000027 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000027">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000007"/>
+        <rdfs:label xml:lang="en">Desmond&apos;s patient role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000029 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000029">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000010"/>
+        <rdfs:label xml:lang="en">Basil&apos;s patient role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000030 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000030">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000011"/>
+        <rdfs:label xml:lang="en">Clara&apos;s patient role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000031 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000031">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:comment xml:lang="en">Amy has a diagnosis of essential hypertension but no BP measures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Amy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000032 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000032">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <rdfs:label xml:lang="en">Amy&apos;s first health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000033 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000033">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000011"/>
+        <rdfs:label xml:lang="en">Clara&apos;s age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000034 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000034">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/VSO_0000015"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000007"/>
+        <rdfs:label xml:lang="en">Desmond&apos;s diastolic BP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000036 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000036">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000073"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_10825"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000031"/>
+        <rdfs:label xml:lang="en">Amy&apos;s diagnosis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000037 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000037">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">118.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Amy&apos;s systolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000038 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000038">
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000034"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Desmond&apos;s first diastolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000039 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000039">
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000034"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">81.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Desmond&apos;s second diastolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000042 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000042">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000027"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000039"/>
+        <rdfs:label xml:lang="en">Desmond&apos;s second health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000046 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000046">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000048"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">92.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Ernest&apos;s diastolic BP measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000047 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000047">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000017"/>
+        <rdfs:label xml:lang="en">Ernest&apos;s patient role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000048 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000048">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/VSO_0000015"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000017"/>
+        <rdfs:label xml:lang="en">Ernest&apos;s diastolic BP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000049 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000049">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/VSO_0000038"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000017"/>
+        <rdfs:label xml:lang="en">Ernest&apos;s systolic BP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000050 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000050">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <obo:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000047"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000026"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000046"/>
+        <rdfs:label xml:lang="en">Ernest&apos;s only health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000052 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000052">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000010"/>
+        <rdfs:label xml:lang="en">Basil&apos;s age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000053 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000053">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000052"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Basil&apos;s age measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000054 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000054">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000033"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Clara&apos;s age measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000055 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000055">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000007"/>
+        <rdfs:label xml:lang="en">Desmond&apos;s age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000056 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000056">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000055"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Desmond&apos;s age measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000057 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000057">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000017"/>
+        <rdfs:label xml:lang="en">Ernest&apos;s age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000058 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000058">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000057"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">54.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Ernest&apos;s age measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000059 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000059">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:comment xml:lang="en">Fanny is 15 years old</rdfs:comment>
+        <rdfs:label xml:lang="en">Fanny</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000060 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000060">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000011"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000059"/>
+        <rdfs:label xml:lang="en">Fanny&apos;s age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000061 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000061">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000061"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Fanny&apos;s age measurement datum</rdfs:label>
+    </owl:NamedIndividual>
+
+
+  <rdf:Description rdf:about="http://example.org/htn_temporality_support/21">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000032"/>
+    <rdfs:label>A HCE 1 start</rdfs:label>
+  </rdf:Description>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/27">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/21"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-07</ns0:IAO_0000004>
+    <rdfs:label>A HCE 1 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/14">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000019"/>
+    <rdfs:label>B HCE 1 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/13">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/14"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-08</ns0:IAO_0000004>
+    <rdfs:label>B HCE 1 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/8">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000020"/>
+    <rdfs:label>B HCE 2 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/7">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/8"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-15</ns0:IAO_0000004>
+    <rdfs:label>B HCE 2 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:OGMS_0000097 rdf:about="http://example.org/htn_temporality_support/1">
+    <ns0:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000029"/>
+    <ns0:OBI_0000299>
+      <ns0:HTN_ABOX_00000001 rdf:about="http://example.org/htn_temporality_support/25">
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.0</ns0:IAO_0000004>
+        <ns0:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000013"/>
+        <rdfs:label>B SBP datum 3</rdfs:label>
+      </ns0:HTN_ABOX_00000001>
+    </ns0:OBI_0000299>
+
+    <rdfs:label>Basil's third health care encounter</rdfs:label>
+  </ns0:OGMS_0000097>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/2">
+    <ns0:RO_0002223 rdf:resource="http://example.org/htn_temporality_support/1"/>
+    <rdfs:label>B HCE 3 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/3">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/2"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-22</ns0:IAO_0000004>
+    <rdfs:label>B HCE 3 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/10">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000023"/>
+    <rdfs:label>C HCE 1 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/9">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/10"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-09</ns0:IAO_0000004>
+    <rdfs:label>C HCE 1 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/12">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000025"/>
+    <rdfs:label>C HCE 2 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/11">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/12"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-16</ns0:IAO_0000004>
+    <rdfs:label>C HCE 2 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:OGMS_0000097 rdf:about="http://example.org/htn_temporality_support/4">
+    <ns0:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000030"/>
+    <ns0:OBI_0000299>
+      <ns0:HTN_ABOX_00000001 rdf:about="http://example.org/htn_temporality_support/30">
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">129</ns0:IAO_0000004>
+        <ns0:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
+        <rdfs:label>C SBP datum 3</rdfs:label>
+      </ns0:HTN_ABOX_00000001>
+    </ns0:OBI_0000299>
+
+    <rdfs:label>Clara's third health care encounter</rdfs:label>
+  </ns0:OGMS_0000097>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/5">
+    <ns0:RO_0002223 rdf:resource="http://example.org/htn_temporality_support/4"/>
+    <rdfs:label>C HCE 3 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/6">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/5"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</ns0:IAO_0000004>
+    <rdfs:label>C HCE 3 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/22">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000008"/>
+    <rdfs:label>D HCE 1 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/28">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/22"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-10</ns0:IAO_0000004>
+    <rdfs:label>D HCE 1 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/23">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000042"/>
+    <rdfs:label>D HCE 2 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/29">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/23"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-17</ns0:IAO_0000004>
+    <rdfs:label>D HCE 2 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+  <ns0:BFO_0000035 rdf:about="http://example.org/htn_temporality_support/24">
+    <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000050"/>
+    <rdfs:label>E HCE 1 start</rdfs:label>
+  </ns0:BFO_0000035>
+
+  <ns0:IAO_0000416 rdf:about="http://example.org/htn_temporality_support/26">
+    <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/24"/>
+    <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-11</ns0:IAO_0000004>
+    <rdfs:label>E HCE 1 start date</rdfs:label>
+  </ns0:IAO_0000416>
+
+   <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000008">
+    <ns0:BFO_0000063 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000042"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000019">
+    <ns0:BFO_0000063>
+      <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000020">
+        <ns0:BFO_0000063 rdf:resource="http://example.org/htn_temporality_support/1"/>
+      </rdf:Description>
+    </ns0:BFO_0000063>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000023">
+    <ns0:BFO_0000063>
+      <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000025">
+        <ns0:BFO_0000063 rdf:resource="http://example.org/htn_temporality_support/4"/>
+      </rdf:Description>
+    </ns0:BFO_0000063>
+
+  </rdf:Description>
+
+    </rdf:RDF>
