@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/htnts.ttl/"
+     xml:base="http://example.org/htnts.ttl/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ns0="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/htnts.ttl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000299"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002223 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002223"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000004 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000004"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000416 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000416"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000097 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/htn_temporality_support/1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <ns0:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000029"/>
+        <ns0:OBI_0000299 rdf:resource="http://example.org/htn_temporality_support/25"/>
+        <rdfs:label>Basil&apos;s third health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/10 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/10">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000023"/>
+        <rdfs:label>C HCE 1 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/11 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/11">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/12"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-16</ns0:IAO_0000004>
+        <rdfs:label>C HCE 2 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/12 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/12">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000025"/>
+        <rdfs:label>C HCE 2 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/13 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/13">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/14"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-08</ns0:IAO_0000004>
+        <rdfs:label>B HCE 1 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/14 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/14">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000019"/>
+        <rdfs:label>B HCE 1 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/2 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://example.org/htn_temporality_support/1"/>
+        <rdfs:label>B HCE 3 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/21 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/21">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000032"/>
+        <rdfs:label>A HCE 1 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/22 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/22">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000008"/>
+        <rdfs:label>D HCE 1 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/23 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/23">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000042"/>
+        <rdfs:label>D HCE 2 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/24 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/24">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000050"/>
+        <rdfs:label>E HCE 1 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/25 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/25">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <ns0:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000013"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.0</ns0:IAO_0000004>
+        <rdfs:label>B SBP datum 3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/26 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/26">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/24"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-11</ns0:IAO_0000004>
+        <rdfs:label>E HCE 1 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/27 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/27">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/21"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-07</ns0:IAO_0000004>
+        <rdfs:label>A HCE 1 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/28 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/28">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/22"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-10</ns0:IAO_0000004>
+        <rdfs:label>D HCE 1 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/29 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/29">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/23"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-17</ns0:IAO_0000004>
+        <rdfs:label>D HCE 2 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/3 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/2"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-22</ns0:IAO_0000004>
+        <rdfs:label>B HCE 3 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/30 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/30">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
+        <ns0:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000022"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">129</ns0:IAO_0000004>
+        <rdfs:label>C SBP datum 3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/4 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/4">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000097"/>
+        <ns0:BFO_0000055 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000030"/>
+        <ns0:OBI_0000299 rdf:resource="http://example.org/htn_temporality_support/30"/>
+        <rdfs:label>Clara&apos;s third health care encounter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/5 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/5">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://example.org/htn_temporality_support/4"/>
+        <rdfs:label>C HCE 3 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/6 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/6">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/5"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</ns0:IAO_0000004>
+        <rdfs:label>C HCE 3 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/7 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/7">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/8"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-15</ns0:IAO_0000004>
+        <rdfs:label>B HCE 2 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/8 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/8">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <ns0:RO_0002223 rdf:resource="http://purl.obolibrary.org/obo/HTN_00000020"/>
+        <rdfs:label>B HCE 2 start</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/htn_temporality_support/9 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/htn_temporality_support/9">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <ns0:IAO_0000136 rdf:resource="http://example.org/htn_temporality_support/10"/>
+        <ns0:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-09</ns0:IAO_0000004>
+        <rdfs:label>C HCE 1 start date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000008 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000013 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000013"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000019 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000020 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000020"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000022 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000022"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000023 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000025 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000025"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000029 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000029"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000030 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000032 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000032"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000042 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000042"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTN_00000050 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_00000050"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
