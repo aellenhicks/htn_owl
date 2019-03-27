@@ -5,8 +5,6 @@ Owner | Amanda Hicks, aellenhicks@gmail.com
 
 License | CC BY 4.0 
 
-URL | www.purl.obolibrary.org/obo/HTN
-
 Repository | https://github.com/aellenhicks/htn_owl
 
 Communication method | Github issue tracker
