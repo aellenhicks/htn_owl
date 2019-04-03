@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://raw.githubusercontent.com/aellenhicks/htn_owl/a_box"
-     xml:base="https://raw.githubusercontent.com/aellenhicks/htn_owl/a_box"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl/"
+     xml:base="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
@@ -726,6 +726,7 @@
     <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000038 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000038">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000034"/>
         <rdfs:label xml:lang="en">Desmond&apos;s first diastolic BP measurement datum</rdfs:label>
@@ -736,6 +737,7 @@
     <!-- http://purl.obolibrary.org/obo/HTN_ABOX_00000039 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000039">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
         <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">81.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000034"/>
         <rdfs:label xml:lang="en">Desmond&apos;s second diastolic BP measurement datum</rdfs:label>
