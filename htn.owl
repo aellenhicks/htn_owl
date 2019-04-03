@@ -17,9 +17,12 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
     <owl:Ontology rdf:about="https://purl.obolibrary.org/obo/htn">
-        <oboInOwl:creation_date>2019-03-19</oboInOwl:creation_date>
         <dc:title>Hypertension Ontology For Clinical Data</dc:title>
+        <oboInOwl:creation_date>2019-04-03</oboInOwl:creation_date>
         <dc:creator>Amanda Hicks</dc:creator>
+        <dc:creator>Chris Stoeckert</dc:creator>
+        <dc:creator>Danielle Mowery</dc:creator>
+        <dc:creator>Mark Miller</dc:creator>
     </owl:Ontology>
     
 
@@ -5959,6 +5962,15 @@ Environments include natural environments or exposures, experimentally applied c
     <!-- http://purl.obolibrary.org/obo/RO_0004022 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004022">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000023"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relation that holds between the disease and a feature (a phenotype or other disease) where the physical basis of the disease is the feature.</rdfs:comment>
         <rdfs:label xml:lang="en">disease arises from feature</rdfs:label>
     </owl:ObjectProperty>
@@ -6355,7 +6367,6 @@ A continuant that is a bearer of quality and realizable entity entities, in whic
         <obo:IAO_0000116 xml:lang="en">Spatial region doesn&apos;t have a closure axiom because the subclasses don&apos;t exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn&apos;t overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional.</obo:IAO_0000116>
         <obo:IAO_0000600 xml:lang="en">A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])</obo:IAO_0000600>
         <obo:IAO_0000601 xml:lang="en">All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])</obo:IAO_0000601>
-        <obo:IAO_0000601 xml:lang="en">All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])</obo:IAO_0000601>
         <obo:IAO_0000602>(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
@@ -6378,12 +6389,6 @@ A continuant that is a bearer of quality and realizable entity entities, in whic
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
         <owl:annotatedTarget xml:lang="en">All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/036-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
-        <owl:annotatedTarget xml:lang="en">All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/036-001"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -6413,7 +6418,6 @@ A continuant that is a bearer of quality and realizable entity entities, in whic
         <obo:IAO_0000116 xml:lang="en">Temporal region doesn&apos;t have a closure axiom because the subclasses don&apos;t exhaust all possibilites. An example would be the mereological sum of a temporal instant and a temporal interval that doesn&apos;t overlap the instant. In this case the resultant temporal region is neither 0-dimensional nor 1-dimensional</obo:IAO_0000116>
         <obo:IAO_0000600 xml:lang="en">A temporal region is an occurrent entity that is part of time as defined relative to some reference frame. (axiom label in BFO2 Reference: [100-001])</obo:IAO_0000600>
         <obo:IAO_0000601 xml:lang="en">All parts of temporal regions are temporal regions. (axiom label in BFO2 Reference: [101-001])</obo:IAO_0000601>
-        <obo:IAO_0000601 xml:lang="en">All parts of temporal regions are temporal regions. (axiom label in BFO2 Reference: [101-001])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">Every temporal region t is such that t occupies_temporal_region t. (axiom label in BFO2 Reference: [119-002])</obo:IAO_0000601>
         <obo:IAO_0000602>(forall (r) (if (TemporalRegion r) (occupiesTemporalRegion r r))) // axiom label in BFO2 CLIF: [119-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x y) (if (and (TemporalRegion x) (occurrentPartOf y x)) (TemporalRegion y))) // axiom label in BFO2 CLIF: [101-001] </obo:IAO_0000602>
@@ -6438,12 +6442,6 @@ A continuant that is a bearer of quality and realizable entity entities, in whic
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
         <owl:annotatedTarget xml:lang="en">All parts of temporal regions are temporal regions. (axiom label in BFO2 Reference: [101-001])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/101-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
-        <owl:annotatedTarget xml:lang="en">All parts of temporal regions are temporal regions. (axiom label in BFO2 Reference: [101-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/101-001"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -6513,7 +6511,6 @@ A continuant that is a bearer of quality and realizable entity entities, in whic
         <obo:IAO_0000112 xml:lang="en">the spatiotemporal region occupied by the development of a cancer tumor</obo:IAO_0000112>
         <obo:IAO_0000600 xml:lang="en">A spatiotemporal region is an occurrent entity that is part of spacetime. (axiom label in BFO2 Reference: [095-001])</obo:IAO_0000600>
         <obo:IAO_0000601 xml:lang="en">All parts of spatiotemporal regions are spatiotemporal regions. (axiom label in BFO2 Reference: [096-001])</obo:IAO_0000601>
-        <obo:IAO_0000601 xml:lang="en">All parts of spatiotemporal regions are spatiotemporal regions. (axiom label in BFO2 Reference: [096-001])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">Each spatiotemporal region at any time t projects_onto some spatial region at t. (axiom label in BFO2 Reference: [099-001])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">Each spatiotemporal region projects_onto some temporal region. (axiom label in BFO2 Reference: [098-001])</obo:IAO_0000601>
         <obo:IAO_0000601 xml:lang="en">Every spatiotemporal region occupies_spatiotemporal_region itself.</obo:IAO_0000601>
@@ -6536,12 +6533,6 @@ A continuant that is a bearer of quality and realizable entity entities, in whic
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
         <owl:annotatedTarget xml:lang="en">All parts of spatiotemporal regions are spatiotemporal regions. (axiom label in BFO2 Reference: [096-001])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/096-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
-        <owl:annotatedTarget xml:lang="en">All parts of spatiotemporal regions are spatiotemporal regions. (axiom label in BFO2 Reference: [096-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/096-001"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -7651,6 +7642,7 @@ An independent continuant that is spatially extended whose identity is independe
     <!-- http://purl.obolibrary.org/obo/DOID_0014667 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0014667">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that involving errors in metabolic processes of building or degradation of molecules.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:E88.9</oboInOwl:hasDbXref>
@@ -7691,6 +7683,7 @@ An independent continuant that is spatially extended whose identity is independe
     <!-- http://purl.obolibrary.org/obo/DOID_0050117 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10115</oboInOwl:hasAlternativeId>
@@ -7741,6 +7734,7 @@ An independent continuant that is spatially extended whose identity is independe
     <!-- http://purl.obolibrary.org/obo/DOID_0050155 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050155">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_863"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nervous system disease which is located in a part of the nervous system responsible for processing sensory information that consists of sensory receptors, neural pathways, and parts of the brain involved in sensory perception. Commonly recognized sensory systems are those for vision, hearing, somatic sensation (touch), taste and olfaction (smell).</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
@@ -7922,6 +7916,21 @@ An independent continuant that is spatially extended whose identity is independe
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050758</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metabolic acidosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050828 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050828">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vascular disease that is located_in an artery.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-02-12T03:08:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050828</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artery disease</rdfs:label>
     </owl:Class>
     
 
@@ -8319,6 +8328,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_10763 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10763">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004022"/>
@@ -8628,6 +8638,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_114 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cardiovascular system disease that involves the heart.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:I51.9</oboInOwl:hasDbXref>
@@ -8674,6 +8685,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_11459 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11459">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_6713"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_9428"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G93.2</oboInOwl:hasDbXref>
@@ -8971,6 +8983,34 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_1287 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1287">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity which occurs in the blood, heart, blood vessels or the lymphatic system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells or lymph to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:73</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:429.2</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002318</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2931</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155263000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:194707003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195139006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195594006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266275004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266336005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:49601007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0007222</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease of subdivision of hemolymphoid system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1287</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_AGR_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_MGI_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_12930 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_12930">
@@ -9172,6 +9212,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1443 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1443">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_936"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:331.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154994001</oboInOwl:hasDbXref>
@@ -9195,6 +9236,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_14566 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_14566">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that is characterized by abnormally rapid cell division.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0000818</oboInOwl:hasAlternativeId>
@@ -9230,6 +9272,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_15 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_15">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in reproductive system organs.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:6309</oboInOwl:hasAlternativeId>
@@ -9248,6 +9291,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that involves a psychological or behavioral pattern generally associated with subjective distress or disability that occurs in an individual, and which are not a part of normal development or culture.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:F99</oboInOwl:hasDbXref>
@@ -9294,6 +9338,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_1579 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1579">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that located_in the respiratory system which extends from the nasal sinuses to the diaphragm.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3226</oboInOwl:hasAlternativeId>
@@ -9477,9 +9522,51 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_178">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cardiovascular system disease that primarily affects the blood vessels which includes the arteries, veins and capillaries that carry blood to and from the heart.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0000405</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2403</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2869</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:324</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:325</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:45</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:I72.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:442.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D000783</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D014652</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D020758</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D020760</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C26693</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C35117</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:134342004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155425005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155428007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195292009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:27550009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:362727005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:371029002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:432119003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:85659009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0002940</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0042373</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0752127</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0752130</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular tissue disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:178</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_18 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_18">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in kidney, ureter, bladder and urethra.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:579</oboInOwl:hasAlternativeId>
@@ -9735,6 +9822,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2349 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2349">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artery disease that is characterized by a thickening and hardening of arterial walls in the arteries.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSP:0571-2299</oboInOwl:hasDbXref>
@@ -9791,6 +9879,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2388 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2388">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:593.81</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C35338</oboInOwl:hasDbXref>
@@ -9915,6 +10004,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_2786 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_2786">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_936"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002526</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155010002</oboInOwl:hasDbXref>
@@ -10191,6 +10281,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_326 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_326">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vascular disease that is characterized by a restriction in blood supply to tissues.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D007511</oboInOwl:hasDbXref>
@@ -10205,9 +10296,40 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_331 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_331">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_863"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nervous system disease that affects either the spinal cord (myelopathy) or brain (encephalopathy) of the central nervous system.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G96.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002493</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2934</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:138748005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154981003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155049004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155059003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:192641002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:193076009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:194566008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:23853001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:267144009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:267679005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:267700003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:267702006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:275539005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0007682</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:331</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">central nervous system disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_3393 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3393">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artery disease that is characterized by plaque building up along the inner walls of the arteries of the heart resulting in a narrowing of the arteries and a reduced blood supply to the cardiac muscles.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10506</oboInOwl:hasAlternativeId>
@@ -10282,6 +10404,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_341 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_341">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vascular disease that is characterized by obstruction of larger arteries not within the coronary, aortic arch vasculature, or brain.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2868</oboInOwl:hasAlternativeId>
@@ -10513,6 +10636,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_520 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_520">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artery disease that is characterized by degeneration of the cells composing the aortic wall.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D001018</oboInOwl:hasDbXref>
@@ -10670,6 +10794,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_574 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_574">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_863"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nervous system disease that affects the peripheral nervous system.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:13069</oboInOwl:hasAlternativeId>
@@ -10881,6 +11006,7 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_630 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_630">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that has_material_basis_in genetic variations in the human genome.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D030342</oboInOwl:hasDbXref>
@@ -10917,6 +11043,54 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_6713 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6713">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artery disease that is characterized by dysfunction of the blood vessels supplying the brain.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:12214</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3455</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8231</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0000712</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:I60-I69</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:I63.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:I67.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:430-438.99</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:437.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002561</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D020521</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2938</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3390</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:601367</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155388006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155405006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155412002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195208004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195249004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195595007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:230690007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266312006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266315008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:270883006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:313267000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:62914000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:82797006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0007820</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0038454</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVA (cerebral vascular accident)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerebrovascular accident (disorder)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cerebrovascular accident</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cerebrovascular disorder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stroke</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:6713</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM mapping confirmed by DO. [SN].</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cerebrovascular disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_6929 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6929">
@@ -10931,6 +11105,25 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:6929</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinal edema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_7 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_7">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that manifests in a defined anatomical structure.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:71</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:72</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease of anatomical entity</rdfs:label>
     </owl:Class>
     
 
@@ -10955,6 +11148,7 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_74 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_74">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An immune system disease that has_material_basis_in hematopoietic cells.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:D75.9</oboInOwl:hasDbXref>
@@ -10989,6 +11183,7 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_77 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_77">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the gastrointestinal tract.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:27</oboInOwl:hasAlternativeId>
@@ -11209,6 +11404,34 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_863 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_863">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the central nervous system or located_in the peripheral nervous system.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G00-G99</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G98</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G98.8</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:349.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D009422</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C26835</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:118940003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154981003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155262005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:192641002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:267679005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:286946008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0027765</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:863</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_AGR_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_MGI_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nervous system disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_8649 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8649">
@@ -11307,6 +11530,7 @@ OMIM mapping by NeuroDevNet. [LS].</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/DOID_866 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_866">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vascular disease that is located_in a vein.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:I82</oboInOwl:hasDbXref>
@@ -11513,9 +11737,40 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DOID_936 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_936">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_331"/>
+        <obo:IAO_0000115>A central nervous system disease that is located_in the brain.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8510</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G93.40</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:G93.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:348.3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:348.30</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:348.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D001927</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C26920</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C96413</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155053002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:193051008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:193059005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:76011009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:81308009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0006111</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0085584</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">encephalopathy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:936</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_9428 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9428">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_936"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D019586</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C84791</oboInOwl:hasDbXref>
@@ -11915,7 +12170,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VSO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:comment>A blood pressure measurement datum that is a quality measure of some diastolic blood pressure</rdfs:comment>
         <rdfs:label xml:lang="en">diastolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
@@ -11933,7 +12188,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A blood pressure measurement datum that is a quality measure of some systolic blood pressure</obo:IAO_0000115>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:label xml:lang="en">systolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
     
@@ -12058,7 +12313,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">A human who is equal to or older than 18 years old</rdfs:comment>
         <rdfs:label xml:lang="en">adult over 18 years of age</rdfs:label>
     </owl:Class>
@@ -12070,7 +12325,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000014"/>
         <obo:IAO_0000115>An elevated blood pressure phenotype of systolic blood pressure that is above some specifed threshold</obo:IAO_0000115>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:label xml:lang="en">elevated systolic phenotype</rdfs:label>
     </owl:Class>
     
@@ -12127,7 +12382,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000014"/>
         <obo:IAO_0000115 xml:lang="en">An elevated blood pressure phenotype of diastolic blood pressure that is above some specifed threshold</obo:IAO_0000115>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:label xml:lang="en">elevated diastolic phenotype</rdfs:label>
     </owl:Class>
     
@@ -12211,7 +12466,7 @@ OMIM mapping confirmed by DO. [SN].</rdfs:comment>
 
 http://www.onlinejacc.org/content/71/19/e127?_ga=2.55616109.754894593.1553089039-383350264.1553089039</obo:IAO_0000115>
         <obo:IAO_0000115>An elevated adult diastolic blood pressure measurement datum that is quality measurement of a diastolic blood pressure is equal to above 120 mm Hg and equal to or less than 139 mm Hg</obo:IAO_0000115>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:label xml:lang="en">stage 1 elevated adult systolic blood pressure meaurement datum per ACC 2017 guidelines</rdfs:label>
     </owl:Class>
     
@@ -12270,7 +12525,7 @@ http://www.onlinejacc.org/content/71/19/e127?_ga=2.55616109.754894593.1553089039
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTN_00000043"/>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">An elevated diastolic blood pressure measurement datum that is quality measurement of a diastolic blood pressure that inheres in an adult with a measurement value that is equal to or above some specified threshold for adults</rdfs:comment>
         <rdfs:label xml:lang="en">elevated adult diastolic blood pressure measurement datum</rdfs:label>
     </owl:Class>
@@ -12347,7 +12602,7 @@ http://www.onlinejacc.org/content/71/19/e127?_ga=2.55616109.754894593.1553089039
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>An age measurement datum that is about a human being has a measurement value equal to or greater than 18 years</obo:IAO_0000115>
-        <dc:creator>Amanda Hicks</dc:creator>
+        <obo:IAO_0000117>Amanda Hicks</obo:IAO_0000117>
         <rdfs:label xml:lang="en">adult over 18 years of age measurement datum</rdfs:label>
     </owl:Class>
     
@@ -15638,6 +15893,31 @@ All subtype will be defined by textual definition now.</obo:IAO_0000232>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000113"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
+        <obo:IAO_0000232>creation date: 2009-06-23T11:21:20Z</obo:IAO_0000232>
+        <rdfs:label>disease</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OGMS_0000032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000032">
@@ -15665,6 +15945,7 @@ All subtype will be defined by textual definition now.</obo:IAO_0000232>
     <!-- http://purl.obolibrary.org/obo/OGMS_0000034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000113"/>
@@ -15683,6 +15964,7 @@ All subtype will be defined by textual definition now.</obo:IAO_0000232>
     <!-- http://purl.obolibrary.org/obo/OGMS_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000113"/>
@@ -17716,13 +17998,52 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
 
     <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
@@ -17743,13 +18064,79 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
     </rdf:Description>
     <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
@@ -17762,68 +18149,47 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/omrse.owl"/>
     </rdf:Description>
     <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/omrse.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
@@ -17839,88 +18205,7 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
@@ -17935,25 +18220,25 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
@@ -17962,13 +18247,10 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pr.owl"/>
@@ -17989,88 +18271,16 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
-    </rdf:Description>
-    <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
@@ -18091,6 +18301,27 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
@@ -18100,10 +18331,31 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
@@ -18127,7 +18379,25 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
@@ -18136,13 +18406,25 @@ Category=external. Note: This entity is distinct from CHEBI: &quot;amino-acid re
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/hp.owl"/>
     </rdf:Description>
     <rdf:Description>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
