@@ -1,0 +1,13 @@
+# count inferred 'precedes' relationships.  Used with Owl-Horst (Optimized) reasoning in GraphDB 8.9
+
+New C4: Showing results from 1 to 10 of 10. Query took 0.1s, minutes ago.
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?hce1l ?hce2l  where {
+    ?hce1 a obo:OGMS_0000097 ;
+          rdfs:label ?hce1l .
+    ?hce2 a obo:OGMS_0000097 ;
+          rdfs:label ?hce2l .
+    ?hce1 obo:BFO_0000063 ?hce2 .
+}
+order by ?hce1l ?hce2l
