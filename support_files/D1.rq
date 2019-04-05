@@ -1,0 +1,10 @@
+# delete existing temporality statements in A-box
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+delete {
+    ?s ?p ?o .
+} where {
+    values ?p {
+        obo:BFO_0000063 obo:RO_0002090 
+    }
+    ?s ?p ?o .
+}
