@@ -1,0 +1,37 @@
+# report the patients whose most recent systolic blood pressure value
+# is greater than their immediately preceding systolic blood pressure value
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select (?patlab as ?patientLabel) (?sbpmdVal1 as ?mostRecent) (?sbpmdVal2 as ?previous)
+where {
+    ?patient rdfs:label ?patlab.
+    ?pr2 a obo:OMRSE_00000011 ;
+         obo:RO_0000052 ?patient .
+    ?hce1 a obo:OGMS_0000097 ;
+          obo:BFO_0000055 ?patrole ;
+          obo:OBI_0000299 ?sbpmd1 .
+    ?es1 obo:RO_0002223 ?hce1 .
+    ?esd1 obo:IAO_0000136 ?es1 ;
+          obo:IAO_0000004 ?esdv1 .
+    filter(?esdv1=?maxEncDateVal)
+    ?sbpmd1 obo:IAO_0000004 ?sbpmdVal1 .
+    ?hce2 a obo:OGMS_0000097 ;
+          obo:BFO_0000055 ?patrole ;
+          obo:OBI_0000299 ?sbpmd2 .
+    ?sbpmd2 obo:IAO_0000004 ?sbpmdVal2 .
+    ?hce2 obo:RO_0002090 ?hce1 .
+    filter(?sbpmdVal1>?sbpmdVal2)
+    {
+        select ?patient (max(?esdval) as ?maxEncDateVal)  where {
+            ?patrole a obo:OMRSE_00000011 ;
+                     obo:RO_0000052 ?patient .
+            ?patient a obo:NCBITaxon_9606 .
+            ?hce a obo:OGMS_0000097 ;
+                 obo:BFO_0000055 ?patrole .
+            ?encstart obo:RO_0002223 ?hce .
+            ?encstartdate obo:IAO_0000136 ?encstart ;
+                          obo:IAO_0000004 ?esdval .
+        }
+        group by ?patient
+    }
+}
