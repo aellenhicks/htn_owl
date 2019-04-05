@@ -1,0 +1,11 @@
+# count asserted precedes relationships
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?hce1l ?hce2l  where {
+    ?hce1 a obo:OGMS_0000097 ;
+          rdfs:label ?hce1l .
+    ?hce2 a obo:OGMS_0000097 ;
+          rdfs:label ?hce2l .
+    ?hce1 obo:RO_0002090 ?hce2 .
+}
+order by ?hce1l ?hce2l
