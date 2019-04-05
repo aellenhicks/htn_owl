@@ -1,4 +1,4 @@
-# count asserted precedes relationships
+# count asserted immediately-precedes relationships
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 select ?hce1l ?hce2l  where {
