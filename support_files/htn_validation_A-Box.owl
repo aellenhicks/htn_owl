@@ -1,30 +1,31 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/support_files/htn_validation_A-Box.owl/"
-     xml:base="https://raw.githubusercontent.com/aellenhicks/htn_owl/a_box/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:fn="http://www.w3.org/2005/xpath-functions#"
-     xmlns:gn="http://www.geonames.org/ontology#"
-     xmlns:VSO="http://purl.obolibrary.org/obo/VSO#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xml:base="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/support_files/htn_validation_A-Box.owl/"
      xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:cito="http://purl.org/spar/cito/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:sesame="http://www.openrdf.org/schema/sesame#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
+     xmlns:gn="http://www.geonames.org/ontology#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:VSO="http://purl.obolibrary.org/obo/VSO#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/support_files/htn_validation_A-Box.owl">
-        <dc:creator>Amanda Hicks</dc:creator>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl"/>
+        <oboInOwl:creation_date>2019-03-19</oboInOwl:creation_date>
         <dc:creator>Mark A. Miller</dc:creator>
         <dc:title>Testing A-box from the Hypertension Ontology For Clinical Data</dc:title>
-        <oboInOwl:creation_date>2019-03-19</oboInOwl:creation_date>
+        <dc:creator>Amanda Hicks</dc:creator>
     </owl:Ontology>
     
 
@@ -92,6 +93,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000299"/>
@@ -129,7 +136,9 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000004 -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000004"/>
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000004">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -166,8 +175,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTN_00000001"/>
     
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000416 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000416"/>
@@ -279,8 +286,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000012">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">127.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000013"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">127.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s elevated systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -310,8 +317,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000018">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">117.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000013"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">117.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s normal systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -345,9 +352,9 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000021">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">126.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
-        <rdfs:label xml:lang="en">Clara first elevated systolic BP measurement datum</rdfs:label>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">126.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Clara&apos;s first elevated systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -378,8 +385,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000024">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">122.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">122.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s second elevated systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -402,8 +409,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000026">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">142.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000049"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">142.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -502,7 +509,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000037">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">118.0</obo:IAO_0000004>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">118.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Amy&apos;s systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -512,8 +519,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000038">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000034"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s first diastolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -523,8 +530,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000039">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">81.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000034"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">81.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s second diastolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -545,8 +552,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000046">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000000"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">92.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000048"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">92.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s diastolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -608,8 +615,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000053">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000052"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -619,8 +626,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000054">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">43.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000033"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -640,8 +647,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000056">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000055"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -661,8 +668,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000058">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">54.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000057"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">54.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -692,8 +699,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000061">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000061"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Fanny&apos;s age measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -703,8 +710,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000062">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-01</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000063"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-01</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s fourth HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -724,8 +731,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000064">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">119.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">119.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s fourth systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -767,8 +774,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000073">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-22</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000072"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-22</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s third HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -800,8 +807,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000076">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000075"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s third HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -811,8 +818,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000077">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-15</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000078"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-15</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s second HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -832,8 +839,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000079">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-09</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000080"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-09</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s first HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -853,8 +860,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000081">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-16</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000082"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-16</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Clara&apos;s second HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -874,8 +881,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000083">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-08</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000084"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-08</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s first HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -935,8 +942,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000095">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">126.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000013"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">126.0</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Basil&apos;s third systolic blood pressure datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -946,8 +953,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000096">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-11</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000094"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-11</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Ernest&apos;s first HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -957,8 +964,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000097">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-07</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000091"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-07</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Amy&apos;s first HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -968,8 +975,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000098">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-10</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000092"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-10</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s first HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -979,8 +986,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000099">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-17</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000093"/>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-17</obo:IAO_0000004>
         <rdfs:label xml:lang="en">Desmond&apos;s second HCE start date</rdfs:label>
     </owl:NamedIndividual>
     
@@ -990,9 +997,9 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTN_ABOX_00000100">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTN_00000001"/>
-        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#float">129.0</obo:IAO_0000004>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/HTN_ABOX_00000022"/>
-        <rdfs:label xml:lang="en">Clara&apos;s third systolic BP measurement datum</rdfs:label>
+        <obo:IAO_0000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">129.0</obo:IAO_0000004>
+        <rdfs:label xml:lang="en">Clara&apos;s third elevated systolic BP measurement datum</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1023,5 +1030,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
