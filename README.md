@@ -13,4 +13,5 @@ Knowledge representation language | Web Ontology Language (OWL) 2.0
 
 DL expressivity | SROIQ(D)
 
-DOI | 10.5281/zenodo.2605329
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2605329.svg)](https://doi.org/10.5281/zenodo.2605329)
+
