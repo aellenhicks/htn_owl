@@ -3,7 +3,7 @@
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/htn_obi_allAxioms" uri="http://ontofox.hegroup.org/userfiles/83mvhpto.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/htn_pato_allAxioms" uri="http://ontofox.hegroup.org/userfiles/nzo0qn4h.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1553179043760" name="http://purl.obolibrary.org/obo/ro.owl" uri="ro.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1553179043760" name="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl/" uri="htn.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1565639580036" name="http://purl.obolibrary.org/obo/ro.owl" uri="ro.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1565639580036" name="https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl/" uri="htn.owl"/>
     </group>
 </catalog>
